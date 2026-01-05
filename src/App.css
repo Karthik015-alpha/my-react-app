@@ -5,17 +5,44 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+.logo.left {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.logo.right {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.img:hover {
+  filter: drop-shadow(0 0 2em #0d07baaa)
+}
+.container {
+  position: relative;
+}
+.container1 {
+  position: relative;
 }
 
 @keyframes logo-spin {
