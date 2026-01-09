@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 function Course({ addCourse }) {
   return (
     <select onChange={(e) => addCourse(e.target.value)}>
@@ -10,7 +9,6 @@ function Course({ addCourse }) {
     </select>
   );
 }
-
 function SelectedCourses({ selectedCourses, removeCourse }) {
   return (
     <select onChange={(e) => removeCourse(e.target.value)}>
@@ -21,7 +19,6 @@ function SelectedCourses({ selectedCourses, removeCourse }) {
     </select>
   );
 }
-
 function CourseFee({ courseFee }) {
   return (
     <>
@@ -30,7 +27,6 @@ function CourseFee({ courseFee }) {
     </>
   );
 }
-
 function TotalFee({ totalFee }) {
   return (
     <>
@@ -39,42 +35,32 @@ function TotalFee({ totalFee }) {
     </>
   );
 }
-
 function CourseApp() {
   const fees = {
     Oracle: 5000,
     Java: 8000,
     Python: 10000,
   };
-
   const maxCourses = 3;
-
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [courseFee, setCourseFee] = useState("");
   const [totalFee, setTotalFee] = useState(0);
-
   const addCourse = (course) => {
     if (course === "") return;
-
     if (selectedCourses.length >= maxCourses) {
       alert("All courses already selected");
       return;
     }
-
     if (selectedCourses.includes(course)) return;
-
     setSelectedCourses([...selectedCourses, course]);
     setCourseFee(fees[course]);
     setTotalFee(totalFee + fees[course]);
   };
-
   const removeCourse = (course) => {
     if (course === "Selected Courses") return;
-
     setSelectedCourses(selectedCourses.filter(c => c !== course));
     setTotalFee(totalFee - fees[course]);
   };
-
   return (
     <>
       <Course addCourse={addCourse} />
@@ -88,5 +74,4 @@ function CourseApp() {
     </>
   );
 }
-
 export default CourseApp;
