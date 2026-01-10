@@ -10,7 +10,7 @@ function Child3(){
     }; */
     return(<div>
             <h2>Current Name:{name}</h2>
-            <button onClick={changename}>
+            <button onClick={()=>setname("SANKALPAILABS")}>
                 Change Name
             </button>
         </div>
