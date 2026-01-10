@@ -13,6 +13,7 @@ import Greeting ,{Greeting1,Student} from './Greeting.jsx'
 import Welcome3 from './Component.jsx'
 import AddNums from './Component2.jsx'
 import CourseApp from './Course.jsx'
+import Parent from './Parent.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -63,7 +64,8 @@ function App() {
       <Counter />
       <Calculator />
       <Exp />*/}
-      <CourseApp />
+      {/* <CourseApp /> */}
+      <Parent />
     </>
   )
 }
