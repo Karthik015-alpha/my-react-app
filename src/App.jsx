@@ -14,13 +14,23 @@ import Welcome3 from './Component.jsx'
 import AddNums from './Component2.jsx'
 import CourseApp from './Course.jsx'
 import Parent from './Parent.jsx'
-
+import Dashboard from './COMPONENTS/DashBoardMain'
+import Stud from './stud'
+import StudentAPI ,{StudentOnline} from './StudentAPI'
+import RuntimeErrorExample from './errorhandle.jsx'
+import ApiErrorExample from './apierror.jsx'
 function App() {
   const [count, setCount] = useState(0)
+  const names = ["Phaneendra", "Kishore", "Suresh"];
 
   return (
     <>
       <div>
+        {/* <RuntimeErrorExample /> */}
+        {/* <ApiErrorExample /> */}
+        {/* <Stud /> */}
+        <StudentAPI />
+        <StudentOnline />
         {/* <div className="header">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo left" alt="Vite logo"  />
@@ -33,6 +43,12 @@ function App() {
             <Opt />
              <Table />*/}
       </div> 
+      {/* {names.map(name => (
+           <h2>{name}</h2>
+        ))} */}
+        {/* {names.map((name,index)=>(
+          <h2 key={index}>{name}</h2>
+        ))} */}
       {/* <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -65,7 +81,9 @@ function App() {
       <Calculator />
       <Exp />*/}
       {/* <CourseApp /> */}
-      <Parent />
+      {/* <Parent /> */}
+      {/* <Dashboard /> */}
+      
     </>
   )
 }

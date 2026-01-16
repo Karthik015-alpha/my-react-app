@@ -1,4 +1,5 @@
 import {useState} from "react";
+import './dashboard.css';
 function Calculator(){
     const[n1,setn1]=useState("");
     const[n2,setn2]=useState("");
@@ -11,7 +12,7 @@ function Calculator(){
     else if(op==="*") result=num1*num2;
     else if(op==="/") result=num2===0 ? "Cannot divide by 0" : num1/num2;
     return(
-        <div>
+        <div className="calculator-box">
             <input
             type="number"
             placeholder="Enter first number"

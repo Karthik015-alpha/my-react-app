@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Courses</title>
+        <style>
+            .container { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+            .column { flex: 1 1 220px; min-width: 200px; }
+            .card { padding: 1rem;  border-radius: 6px; }
+            .field { margin-bottom: 0.6rem; display: block; }
+            label { cursor: pointer; }
+            .fees { margin-top: 1rem; }
+        </style>
+    </head>
+    <body>
+        <script>
+            let fees={
+                MPC:27000,
+                ZPC:30000,
+                MES:32000,
+                AES:26000
+            };
+            let coursefee=0;
+        function Showgroups(course){
+            document.getElementById("bscgroups").style.display="none";
+            document.getElementById("bagroups").style.display="none";
+            if (course === "bsc") {
+            document.getElementById("bscgroups").style.display = "block";
+            }
+            else if (course === "ba") {
+              document.getElementById("bagroups").style.display = "block";
+            }
+        }
+        function showFee(group) {
+           let fee = fees[group];
+           document.getElementById("coursefee").value = fee;
+        }
+        </script>
+        <div class="container">
+            <div class="column card" >
+                <h3>Courses</h3>
+                <label class="field"><input type="radio" name="course" value="bsc" onchange="Showgroups(this.value)"> BSc</label>
+                <label class="field"><input type="radio" name="course" value="ba" onchange="Showgroups(this.value)"> BA</label>
+            </div>
+
+            <div class="column card">
+                <h3>Groups</h3>
+                <div id="bscgroups" style="display:none;">
+                <label class="field"><input type="radio" name="group" value="MPC" onchange="showFee(this.value)"> MPC</label>
+                <label class="field"><input type="radio" name="group" value="ZPC" onchange="showFee(this.value)"> ZPC</label>
+                </div>
+                <div id="bagroups" style="display:none;">
+                <label class="field"><input type="radio" name="group" value="MES" onchange="showFee(this.value)"> MES</label>
+                <label class="field"><input type="radio" name="group" value="AES" onchange="showFee(this.value)"> AES</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fees">
+            <label>Fees: <input type="text"  id="coursefee" /></label>
+        </div>
+    </body>
+</html>

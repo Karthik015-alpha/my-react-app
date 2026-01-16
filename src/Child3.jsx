@@ -8,7 +8,8 @@ function Child3(){
     /* const changename=()=>{
         setname("SANKALPAILABS");
     }; */
-    return(<div>
+    return(
+        <div>
             <h2>Current Name:{name}</h2>
             <button onClick={()=>setname("SANKALPAILABS")}>
                 Change Name
