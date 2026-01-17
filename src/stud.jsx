@@ -1,5 +1,6 @@
 import { useState } from "react";
 import students from "./data/students.json"
+import './App.css'
 function Stud() {
   /* const students = [
     { id: 1, name: "Santhi", course: "React", score: 95 },
@@ -32,57 +33,61 @@ function Stud() {
       })}
     </div>
   ) */
-  // const [selectedStudent, setSelectedStudent] = useState(null);
   // const bgColors=[
   //   "#250989",
   //   "#4c042d",
   //   "#d80f0f",
   //   "#403b06"
   // ];
-  // return (
-    // <<div style={{ padding: "25px", textAlign: "center" }}>
-    //   <h1>Student IDs</h1>
-    //   {/* Centered ID list */}
-    //   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-    //     {students.map((student) => (
-    //       <div
-    //         key={student.id}
-    //         onClick={() => setSelectedStudent(student)}
-    //         style={{
-    //           cursor: "pointer",
-    //           border: "2px solid #f5993c",
-    //           padding: "8px",
-    //           marginBottom: "6px",
-    //           width: "120px"
-    //         }}
-    //       >
-    //         ID: {student.id}
-    //       </div>
-    //     ))}
-    //   </div>
-    //   {/* Show details */}
-    //   {selectedStudent && (
-    //     <div
-    //       style={{
-    //         marginTop: "20px",
-    //         border: "5px solid #f5993c",
-    //         backgroundColor: "#2b3638",
-    //         color: "white",
-    //         padding: "10px",
-    //         borderRadius: "5px",
-    //         width: "300px",
-    //         marginLeft: "auto",
-    //         marginRight: "auto"
-    //       }}
-    //     >
-    //       <h2>Name: {selectedStudent.name}</h2>
-    //       <p>Course: {selectedStudent.course}</p>
-    //       <p>Score: {selectedStudent.score}</p>
-    //     </div>
-    //   )}
-    // </div>
-  // );
-  return(
+  const students = [
+    { id: 1, name: "Santhi", course: "React", score: 95 },
+    { id: 2, name: "Shabreen", course: "Python", score: 98 },
+    { id: 3, name: "Sowmya", course: "JAVA", score: 92 },
+    { id: 4, name: "Karthik", course: "Oracle", score: 92 }
+  ];
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  return (
+    <div class="divclass" style={{ padding: "25px", textAlign: "center" }}>
+      <h1>Student IDs</h1>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        {students.map((student) => (
+          <div
+            key={student.id}
+            onClick={() => setSelectedStudent(student)}
+            style={{
+              cursor: "pointer",
+              border: "2px solid #f5993c",
+              padding: "8px",
+              marginBottom: "6px",
+              width: "120px"
+            }}
+          >
+            ID: {student.id}
+          </div>
+        ))}
+      </div>
+      {selectedStudent && (
+        <div
+          style={{
+            marginTop: "20px",
+            border: "5px solid #f5993c",
+            backgroundColor: "#2b3638",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+            width: "300px",
+            marginLeft: "auto",
+            marginRight: "auto"
+          }}
+        >
+          <h2>Name: {selectedStudent.name}</h2>
+          <p>Course: {selectedStudent.course}</p>
+          <p>Score: {selectedStudent.score}</p>
+        </div>
+      )}
+    </div>
+  );
+  /* return(
     <div style={{padding:"20px"}}>
       <h1>student list</h1>
       {students.map((student,index)=>(
@@ -105,7 +110,7 @@ function Stud() {
         </div>
       ))}
     </div>
-  );
+  ); */
   /*  return(
     <div style={{padding:"20px"}}>
       <h1>student list</h1>

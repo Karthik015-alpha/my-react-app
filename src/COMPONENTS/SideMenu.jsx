@@ -1,6 +1,5 @@
 import React from "react";
 import "../dashboard.css";
-
 export default function Sidebar({ activePage, setActivePage }) {
   return (
     <aside className="sidebar">
@@ -43,6 +42,31 @@ export default function Sidebar({ activePage, setActivePage }) {
           Calculator
         </li>
       </ul>
+
     </aside>
   );
-}
+} 
+// 2
+// import React from "react";
+// import "../dashboard.css";
+// import { useEffect,useState } from "react";
+// function Sidebar() {
+//   const[error,seterror]=useState("[]");
+//   const[state,setstate]=useState();
+//   useEffect(()=>{
+//     async function loadData(){
+//       try{
+//         const res=await fetch("/menu.json");
+//         if(!res.ok){
+//           throw new Error("failed to load json");
+//         }
+//       }
+//     }
+//   })
+//   return (
+//     <aside className="sidebar">
+//       <h2 className="sidebar-title">Dashboard</h2>
+//     </aside>
+//   );
+// }
+

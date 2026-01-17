@@ -19,6 +19,8 @@ import Stud from './stud'
 import StudentAPI ,{StudentOnline} from './StudentAPI'
 import RuntimeErrorExample from './errorhandle.jsx'
 import ApiErrorExample from './apierror.jsx'
+import ApiErrorExample2 from './apierror2.jsx'
+import App2 from './App2.jsx'
 function App() {
   const [count, setCount] = useState(0)
   const names = ["Phaneendra", "Kishore", "Suresh"];
@@ -28,9 +30,11 @@ function App() {
       <div>
         {/* <RuntimeErrorExample /> */}
         {/* <ApiErrorExample /> */}
+        {/* <ApiErrorExample2 /> */}
+        <App2 />
         {/* <Stud /> */}
-        <StudentAPI />
-        <StudentOnline />
+        {/* <StudentAPI /> */}
+        {/* <StudentOnline /> */}
         {/* <div className="header">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo left" alt="Vite logo"  />
