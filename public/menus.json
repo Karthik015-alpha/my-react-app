@@ -1,0 +1,6 @@
+[
+  { "id": 1, "label": "Course", "value": "course" },
+  { "id": 2, "label": "Parent", "value": "parent" },
+  { "id": 3, "label": "Page", "value": "page" },
+  { "id": 4, "label": "Calculator", "value": "calculator" }
+]

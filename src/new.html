@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function pageLoaded() {
+      alert("Page loaded successfully");
+    }
+    function showMessage() {
+      alert("Button was clicked!");
+    }
+    function mouseOver() {
+      document.getElementById("msg").innerHTML = "Mouse is over the text";
+    }
+    function mouseOut() {
+      document.getElementById("msg").innerHTML = "Mouse left the text";
+    }
+    function showValue() {
+      let val = document.getElementById("course").value;
+      alert("Selected course: " + val);
+    }
+    function showText() {
+      let text = document.getElementById("name").value;
+      document.getElementById("output").innerHTML = text;
+    }
+    function focusInput() {
+      document.getElementById("box").style.backgroundColor = "lightyellow";
+    }
+    function blurInput() {
+      alert("You left the input box");
+    }
+     function keyDownEvent() {
+      document.getElementById("output").innerHTML =
+      "Key is pressed";
+    }
+  </script>
+</head>
+<body onload="pageLoaded()">
+<button onclick="showMessage()">Click Me</button>
+<p onmouseover="mouseOver()" onmouseout="mouseOut()">Hover over me</p>
+<p id="msg"></p>
+<select id="course" onchange="showValue()">
+  <option value="">Select</option>
+  <option value="Java">Java</option>
+  <option value="Python">Python</option>
+</select>
+<input type="text" id="name" onkeyup="showText()" onkeydown="keyDownEvent()">
+<p id="output"></p>
+<input type="text" id="box" onfocus="focusInput()" onblur="blurInput()">
+</body>
+</html>
